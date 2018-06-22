@@ -1,0 +1,40 @@
+{
+    "categorieses": [
+            {
+                "categoryName": "Electronics",
+                "resourceID": 1,
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/categorieses/1"
+                    },
+                    "categories": {
+                        "href": "http://localhost:8080/tradetunnel-api/categorieses/1"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/categorieses/1/product"
+                    },
+                    "subCategory": {
+                        "href": "http://localhost:8080/tradetunnel-api/categorieses/1/subCategory"
+                    }
+                }
+            },
+            {
+                "categoryName": "Furniture",
+                "resourceID": 2,
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/categorieses/2"
+                    },
+                    "categories": {
+                        "href": "http://localhost:8080/tradetunnel-api/categorieses/2"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/categorieses/2/product"
+                    },
+                    "subCategory": {
+                        "href": "http://localhost:8080/tradetunnel-api/categorieses/2/subCategory"
+                    }
+                }
+            }
+        ]
+}

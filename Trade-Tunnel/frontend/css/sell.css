@@ -1,0 +1,152 @@
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+#sell {
+    padding-top: 30px;
+    align-self: center;
+    align-content: center;
+    align-self: center;
+    padding-bottom: 30px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.form-control {
+    max-width: 100vw;   
+}
+
+
+#sellLabeldiv{
+margin: auto;    
+}
+
+
+  .popover {
+      border: 1px solid green;
+  }
+  /* Popover Header */
+  .popover-title {
+      background-color: #73AD21; 
+      color: #FFFF00; 
+      font-size: 28px;
+      text-align:center;
+  }
+  /* Popover Body */
+  .popover-content {
+      background-color: coral;
+      color: #FFFF00;
+      padding: 25px;
+  }
+  /* Popover Arrow */
+  .arrow {
+      border-right-color: green !important;
+
+  }
+
+
+
+.carousel-item img {
+  height: 62vh;
+  min-height: 400px;
+
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 600px;
+		height: 100%;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+}
+
+
+.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+}
+
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: 0px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+            transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0px;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+    border-radius: 0;
+    border: none;
+    left: 0;
+}
+
+.modal-header {
+    border-bottom-color: #EEEEEE;
+    background-color: #FAFAFA;
+}
+
+
+#submitSignup, #register {
+    position: absolute;
+    right: 30px;
+}
+
+#reset
+{
+    position: absolute;
+    right: 120px;
+}
+
+.social {
+    text-align: center;
+}
+
+label
+{
+    font-weight: 500;
+}
+    
+#facebook, #google {
+    margin: 20px;
+}
+
+ul {
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;  
+}
+
+ul a:hover {
+    color: aqua;
+}
+

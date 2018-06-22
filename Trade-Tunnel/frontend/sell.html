@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <link rel="icon" href="assets/mainIcon.png">
+
+    <title> Sell | Trade Tunnel </title>
+
+    <!-- Bootstrap CSS Code -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.css" />
+
+
+    <!-- Native CSS Code -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/sell.css">
+
+
+    <!-- Custom CSS Code for validation -->
+    <style>
+
+        label.valid {
+            width: 12px;
+            height: 12px;
+            background: url(assets/img/valid.png) center center no-repeat;
+            display: inline-block;
+            text-indent: -9999px;
+        }
+
+        label.error {
+            color: red;
+            height: 10px;
+            padding: 2px 4px;
+            margin-top: 2px;
+            font-size: 12px;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <!-- Header Bar -->
+        <div class="flex-container bg-dark">
+            <div class="item1">
+                <a href="home.html"><img src="assets/mainIcon.png" class="mainImageIcon"></a>
+            </div>
+            
+            <div class="item2 inner-flex-container">
+                <div class="heading">Trade Tunnel</div>
+                <div class="subheading">Trade it your way...</div>
+            </div>
+            
+            <div class="item3 menu-flex-container">
+                <div class="menuItem"><a href="home.html">Home</a></div>
+                <div class="menuItem"><a href="buy.html">Buy</a></div>
+                <div class="menuItem"><a href="sell.html">Sell</a></div>
+                <div class="menuItem">
+                    <div class="dropdown">
+                      <button class="dropbtn" id="usernameGreeting"></button>
+                      <div class="dropdown-content">
+                        <a href="account.html">Account</a>
+                        <a id="logout" href="">Log Out</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <!--  Sell Page Form for the user -->
+    <div id="main-body" class="container-fluid">
+
+        <div class="row" id="sell">
+            <div class="col-sm-2 vcenter" id="sell-box">
+            </div>
+            <div class="col-sm-8 vcenter" id="sell-box">
+
+                <form id="sell-form" data-toggle="validator" class="form-control needs-validation" enctype="multipart/form-data" role="form" novalidate>
+
+
+                    <div id="sellLabeldiv" class="modal-header bg-dark">
+                        <h3 class="modal-title" id="sellLabel" style="color: white">Enter Product Details</h3>
+                    </div>
+                    <br>
+                    <div id="pname" class="form-group">
+                        <label for="pname">Product Name:</label>
+                        <input id="pname1" type="text" class="form-control" name="pname" placeholder="Product Name" required>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+
+                    <div id="pcategory" class="form-group">
+                        <label for="pcategory">Product Category:</label><br/>
+                        <div class="dropdown">
+                            <select id="category" name="category" class="form-control" style="max-width: 200px" required onchange="populateSubCategory(this.value);">
+                                                <option value="" selected disabled hidden>Select Category</option>
+                                              
+                                            </select>
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="psubcategory" class="form-group">
+                        <label for="psubcategory">Product Subcategory:</label> <br />
+                        <div class="dropdown">
+                            <select id="subcategory" name="subcategory" class="form-control" style="max-width: 200px" required onchange="getAvg(this.value);">
+                                                <option value="" selected disabled hidden>Select Subcategory</option>
+                                                
+                                            </select>
+                            <div class="invalid-feedback">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="price1" class="form-group" style="max-width: 200px">
+                        <label for="price" style="font-weight: 500">Enter Price:</label>
+                        <input name="price" data-content="Average Price for this item is ..." data-toggle="tooltip" type="text" class="form-control" id="price" placeholder="Enter Price" required >
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+
+                    <div id="desc" class="form-group">
+                        <label for="desc">Product Description:</label>
+                        <textarea name="desc" class="form-control" id="desc1" rows="3" placeholder="Description" required></textarea>
+                        <div class="invalid-feedback">
+                        </div>
+                    </div>
+
+                <label for="files">Upload Images:</label>
+                <div id="images1" class="form-group ">
+
+                        <input name="files[]" id="files" type="file" class="form-control" placeholder='Choose a file...' multiple required>
+                        <output id="list"></output>
+
+                        <div class="invalid-feedback">
+                        </div>
+                                          
+                    </div> 
+
+                    <br>
+
+                    <input class="btn btn-primary" type="reset" id="reset" onclick="resetpage();" value="Reset"/>
+
+                    <input id="submitProduct" type="submit" class="btn btn-primary" value="Submit"/>
+
+                </form>
+            </div>
+            <div class="col-sm-2 vcenter" id="sell-box">
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Footer Bar -->
+        <div class="footer-flex-container bg-dark">
+            
+            <div class="footerItem1 footer-menu">
+                <div class="footerItem"><a href="aboutus.html">About Us</a></div>
+                <div class="footerItem"><a href="team.html">Team</a></div>
+                <div class="footerItem"><a href="contactus.html">Contact Us</a></div>
+            </div>
+            
+            <div class="footerItem2">
+                <div class="footerItem"><a href="">Trade Tunnel &copy; 2018. All Rights Reserved.</a></div>
+            </div>
+            
+        </div>
+
+    <!-- Jquery, Popper, Bootstrap JS Code -->
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+    <script src="js/sell.js"></script>
+    <script src="js/logout.js"></script>
+
+    <!--    <script src="assets/js/jquery-1.7.1.min.js"></script>  -->
+
+    <script src="assets/js/jquery.validate.js"></script>
+
+
+
+    <script>
+        $(document).ready(function() {
+            addEventListener('load', function(event) {
+                prettyPrint()
+            }, false);
+
+            $('pre').addClass('prettyprint linenums');
+        });
+
+    </script>
+
+</body>
+
+</html>

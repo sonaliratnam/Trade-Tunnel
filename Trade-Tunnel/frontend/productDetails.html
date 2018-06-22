@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="EN">
+    
+    <title>Product | Trade Tunnel </title>
+    
+    <link rel="icon" href="assets/mainIcon.png">
+
+    <!-- Bootstrap CSS Code -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+
+    
+
+<link rel="stylesheet" href="css/global.css">
+<link media="all" type="text/css" src="css/core.min.css" rel="stylesheet">
+<link media="all" type="text/css" src="css/style1.css" rel="stylesheet">
+<link rel="stylesheet" href="css/productDetails.css">
+
+</head>
+<body>
+
+   <!-- Header Bar -->
+        <div class="flex-container bg-dark">
+            <div class="item1">
+                <a href="home.html"><img src="assets/mainIcon.png" class="mainImageIcon"></a>
+            </div>
+            
+            <div class="item2 inner-flex-container">
+                <div class="heading">Trade Tunnel</div>
+                <div class="subheading">Trade it your way...</div>
+            </div>
+            
+            <div class="item3 menu-flex-container">
+                <div class="menuItem"><a href="home.html">Home</a></div>
+                <div class="menuItem"><a href="buy.html">Buy</a></div>
+                <div class="menuItem"><a href="sell.html">Sell</a></div>
+                <div class="menuItem">
+                    <div class="dropdown">
+                      <button class="dropbtn" id="usernameGreeting"></button>
+                      <div class="dropdown-content">
+                        <a href="account.html">Account</a>
+                        <a href="login.html">Log Out</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--Displaying the image using carousel on one side -->
+    <div id="content" role="main">
+        <div class="section">
+            <div class="container">
+                <div class="row">
+                    <div class="content">
+                        <div class="entry-content">
+                        </div>
+        <div class="col-sm-12">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h2> Product Image </h2>
+                </div>
+                <div class="w3-content w3-display-container" id="carouselimg">
+
+
+
+                    <button class="w3-button w3-white w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-white w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+
+            </div>
+  
+        <!-- Details of the products in a table -->
+        <div class="panel panel-default">
+        <div class="panel-heading"><h2> Product Details </h2></div>
+            <div class="panel-body">
+                    <table class="details_table" width="100%">
+
+                        <tr class="details_table">
+                            <td class="details_main">Product Name:</td>
+                            <td id="prod1"></td>
+                        </tr>
+                        
+                       
+                             <tr class="details_table">
+                            <td class="details_main">Description:</td>
+                            <td id ="prod2">
+                        
+                            </td>
+                                  <tr class="details_table">
+                            <td class="details_main">Status:</td>
+                            <td id ="prod4">
+                            </td>
+                                      
+                                       <tr class="details_table">
+                            <td class="details_main">Price:</td>
+                           <td id ="prod3">
+                        
+                            </td>
+                            
+                   </table>
+            
+            </div>
+    </div>
+    
+        <div class="panel-body"></div>
+    </div>
+        
+    </div>
+                    
+            <!-- Providing with the seller Details -->
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2> Seller Details </h2></div>
+                        <div class="panel-body">
+                                <table class="details_table" width="100%">
+                                  <tr class="details_table">
+                                        <td class="details_main">Seller Name:</td>
+                                        <td id="demo1"></td>
+                                    </tr>
+                                    <tr class="details_table">
+                                        <td class="details_main">Location:</td>
+                                        <td id="demo2"></td>
+                                    </tr>
+
+                                    <tr class="details_table">
+                                        <td class="details_main">Contact Number:</td>
+                                        <td id="demo3">
+                                                             </td>
+                                    </tr>
+                                    <tr class="details_table">
+                                        <td class="details_main">Contact Email:</td>
+                                         <td id="demo">
+                                         </td>
+                                        <script type="text/javascript" src="js/productDetails.js"></script>
+
+
+                                    </tr>
+
+                                                        </table>
+                        </div>
+                </div>
+                         <div class="panel panel-default">
+                             <div class="panel-heading"> <h2> Map </h2></div>
+                        <div class="panel-body">
+                            <div id="map"></div>
+                        </div>
+                    </div>           
+                </div>
+                </div>
+					</div> <!-- .entry-content -->
+        </div>              
+    </div>
+    
+    <!-- Footer Bar -->
+    <div class="footer-flex-container bg-dark">
+
+        <div class="footerItem1 footer-menu">
+            <div class="footerItem"><a href="aboutus.html">About Us</a></div>
+            <div class="footerItem"><a href="team.html">Team</a></div>
+            <div class="footerItem"><a href="contactus.html">Contact Us</a></div>
+        </div>
+
+        <div class="footerItem2">
+            <div class="footerItem"><a href="">Trade Tunnel &copy; 2018. All Rights Reserved.</a></div>
+        </div>
+
+    </div>
+    
+    
+    <!-- Jquery, Popper, Bootstrap JS Code -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2dQVKWoR3YalKTisZ0Uxv1X54p6tco-Q&libraries=places"></script>
+    
+    <script src="js/logout.js"></script>
+    
+    <!-- Custom Mathematical code for the carousel image change -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+
+    </script>
+        
+     </body>
+</html>

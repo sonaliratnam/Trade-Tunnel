@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link rel="icon" href="assets/mainIcon.png">
+        
+        <title> Account | Trade Tunnel </title>
+
+        <link rel = "stylesheet" type="text/css"
+              href="assets/css/ionicons.min.css"> 
+
+        <!-- Bootstrap CSS Code -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <!-- Native CSS Code -->
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/toggle.css">
+        <link rel="stylesheet" href="css/tabbuttons.css">
+        <link rel="stylesheet" href="css/userprofile.css">
+
+    </head>
+
+    <body>
+        <!-- Header Bar -->
+        <div class="flex-container bg-dark">
+            <div class="item1">
+                <a href="home.html"><img src="assets/mainIcon.png" class="mainImageIcon"></a>
+            </div>
+            
+            <div class="item2 inner-flex-container">
+                <div class="heading">Trade Tunnel</div>
+                <div class="subheading">Trade it your way...</div>
+            </div>
+            
+            <div class="item3 menu-flex-container">
+                <div class="menuItem"><a href="home.html" style="font-size: 18px;">Home</a></div>
+                <div class="menuItem"><a href="buy.html" style="font-size: 18px;">Buy</a></div>
+                <div class="menuItem"><a href="sell.html" style="font-size: 18px;">Sell</a></div>
+                <div class="menuItem">
+                    <div class="dropdown">
+                      <button class="dropbtn" id="usernameGreeting" style="font-size: 18px;"></button>
+                      <div class="dropdown-content">
+                        <a href="account.html">Account</a>
+                        <a id="logout" href="">Log Out</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Container Body for the Page -->
+        <div id= "mainContainer" class="container-fluid style="padding : 0px 0px 50px 0px ;"">
+            <div class="container" style="padding: 30px;">
+                
+                <!-- Two Tab Switch for Profile & Products -->
+                
+                <div id= "tabButtons" class = "row">
+                    <div class = "col-sm-3">
+                    </div>
+                    <div class = "col-sm-2">
+                        <button class="w3-button w3-round-xxlarge w3-hover-teal w3-blue" id="profile"> 
+                            <i class="ion-android-contact" width="10"></i> My Profile
+                        </button>
+                    </div>
+                    <div class = "col-sm-1">
+                    </div>
+                    <div class = "col-sm-2">
+                        <button class="w3-button w3-round-xxlarge w3-hover-teal w3-blue" id = "orders">
+                            <i class="ion-ios-cart"></i> My Products
+                        </button>
+                    </div>
+                    <div class = "col-sm-4">
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+            <div id="tabContainers" class="row container-fluid">
+                
+                <!-- First Tab Container for User Profile -->
+                
+                <div align= "left" class = "profileTab tabs container-fluid" >
+                    <div class="form-group row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <form class="form-control needs-validation user" id="formUser" data-toggle = "validator" role ="form" novalidate>
+
+                                <div id="userprofileHeader" class="bg-dark">
+                                    <div class= "form-group row">
+                                        <div class="col-sm-10 col-form-label">
+                                            <h3 class="modal-title" id="profileLabel" style="color: white">User Details</h3>
+                                        </div>
+
+                                        <div class="col-sm-2 col-form-label">
+                                                <input id="editUser" type="button" class="btn btn-primary btn-edit" value= "Edit">
+                                        </div>
+                                    </div>                                        
+                                </div>
+
+                                <!-- Form Body for the user profile -->
+                                
+                                <div class="form-group">
+                                    <label for="firstName" class="col-form-label ">First Name:</label>
+                                    <input type="text" class="col-sm-4 form-control " id="firstName" 
+                                           placeholder="First Name" name="fname" disabled required>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lastName" class="col-form-label">Last Name:</label>
+                                    <input type="text" class="col-sm-4 form-control" id="lastName" placeholder="Last Name" name="lname" disabled required>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="col-form-label">Email Address:</label>
+                                    <input type="email" class="col-sm-4 form-control" id="email" placeholder="Email" name="email" disabled required>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" class="col-form-label">Phone:</label>
+                                    <input type="text" class=" col-sm-4 form-control" id="ph" placeholder="Phone" name="phone" disabled required>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="street1" class="col-form-label">Street Address 1</label>
+                                    <input type="text" class="col-sm-4 form-control" id="addr1" placeholder="Apartment" name= "addr1" disabled required>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="street2" class="col-form-label">Street Address 2</label>
+                                    <input type="text" class="col-sm-4 form-control" id="addr2" placeholder="Lane" name = "addr2" disabled required>
+                                    <div class="col-sm-4 invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="city" class="col-form-label">City</label>
+                                    <input type="text" class="col-sm-4 form-control" id="city" placeholder="City" name= "city" disabled required>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="country" class="col-form-label">Country</label> <br>
+                                    <script type= "text/javascript" src = "js/countries.js"></script>
+                                    <select class="col-sm-4 form-control dropdown" id="country" name ="country" required disabled>
+                                    </select>
+                                    <div class="col-sm-4 invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="state" class="col-form-label">State</label> <br>
+                                    <script type= "text/javascript" src = "js/countries.js"></script>
+                                    <select class="col-sm-4 form-control dropdown" id="state" name ="state" required disabled= "true">
+                                    </select>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="postal" class="col-form-label">Postal Code</label>
+                                    <input type="text" class="col-sm-4 form-control" id="postal" placeholder="Postal" name="postal" disabled required>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div class= "form-group row">
+                                    <div class="btn-editSave col-sm-3 col-form-label "> 
+                                        <button id="saveUser" type="submit" class="btn btn-primary btn-save" value= "Save" onclick="saveProf();saveAddr()">Save</button>
+                                    </div>
+                                    <div class="btn-editSave col-sm-3 col-form-label"> 
+                                            <input id="cancelUser" type="button" class="btn btn-primary btn-cancel" value="Cancel" onclick="canceluser();">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                    <br />
+                    <br />
+
+                </div> 
+                
+                <!-- User Products container-->
+                <div class="orderTab tabs container-fluid">
+                    <div class="row">
+                        
+                        <!-- List of all prducts sold by user -->
+                        
+                        <div class="col-sm-3">
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                    <h2> Products History </h2>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="list-group productsList" id="list-tab" role="tablist"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Information about the selected product -->
+                        
+                        <div class="col-sm-6">
+                            <form id="sell-form" data-toggle="validator" class="form-control needs-validation" data-toggle = "validator" role ="form" novalidate>
+
+                                <div id="sellLabeldiv" class="bg-dark">
+                                    <div class= "form-group row">
+                                        <div class="col-sm-10 col-form-label">
+                                            <h3 class="modal-title" id="sellLabel" style="color: white">Product Details</h3>
+                                        </div>
+
+                                        <div class="col-sm-2 col-form-label">
+                                            <div class="btn-editSave col-form-label"> 
+                                                <input id="editProduct" type="button" class="btn btn-primary btn-edit" value="Edit"> 
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-1"></div>
+                                    </div>                                        
+                                </div>
+
+                                <div id="pnamediv" class="form-group">
+                                    <label class="col-form-label" for="pname">Product Name:</label>
+                                    <input id="pname" type="text" class="col-sm-4 form-control" name="pname" placeholder="Product Name" disabled required>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div id="pcategory" class="form-group">
+                                    <label class="col-form-label" for="pcategory">Product Category:</label> <br>
+                                    <div class="dropdown">
+                                        <select id="category" name="category" class="col-sm-4 form-control" style="max-width: 200px" onchange="populateSubCategory(this.value);" disabled required>
+                                            <option value="" selected disabled hidden>Select Category</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="psubcategory" class="form-group">
+                                    <label class="col-form-label" for="psubcategory">Product Subcategory:</label> <br />
+                                    <div class="dropdown">
+                                        <select id="subcategory" name="subcategory" class="col-sm-4 form-control" style="max-width: 200px" disabled required>
+                                            <option value="" selected disabled hidden>Select Subcategory</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="price1" class="form-group" style="max-width: 200px">
+                                    <label class="col-form-label" for="price" style="font-weight: 500">Enter Price:</label>
+                                    <input  name="price" data-content="Average Price for this item is ..."  data-toggle="tooltip" type="text" class="col-sm-6 form-control" id="price" placeholder="Enter Price" disabled required>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div id="descdiv" class="form-group">
+                                    <label class="col-form-label" for="desc">Product Description:</label>
+                                    <textarea name="desc" class="col-sm-6 form-control" id="desc" rows="3" placeholder="Description" disabled required></textarea>
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>
+
+                                <div id="images1" class="form-group">
+                                    <label for="files">Upload Images:</label> <br>
+                                    <input name="files[]" id="files" style="max-width: 400px" type="file" class="form-control" placeholder='Choose a file...' disabled multiple>
+                                    <output id="list"></output>
+
+                                    <div class="invalid-feedback">
+                                    </div>
+                                </div>    
+
+                                <div class= "form-group row">
+                                    <div class="btn-editSave col-sm-3 col-form-label "> 
+                                        <button id="saveProduct" type="submit" class="btn btn-primary btn-save" onclick="saveProductDetails();"value= "Save">Save</button>
+                                    </div>
+                                    <div class="btn-editSave col-sm-3 col-form-label"> 
+                                            <input id="cancelProduct" type="button" class="btn btn-primary btn-cancel" value="Cancel" onclick="cancelprod();">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        
+                        <!-- Images carousel & Toggle Button for the product -->
+                        <div class="col-sm-3">
+                            <div class= "form-group row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+<!--
+                                <div class="switch switch-red">
+                                    <input type="radio" class="switch-input" name="view2" value="sold" id="sold" onchange="updateStatus();">
+                                    <label for="sold" class="switch-label switch-label-off">SOLD</label>
+                                    <input type="radio" class="switch-input" name="view2" value="unsold" id="unsold" onchange="updateStatus();">
+                                    <label for="unsold" class="switch-label switch-label-on">UNSOLD</label>
+                                    <span class="switch-selection"></span>
+                                </div>
+-->
+                                    
+                                    <!-- Rounded switch -->
+                                    <label class="switch">
+                                        
+                                      <input type="checkbox" id="soldUnsoldSwitch" onchange="updateStatus();">
+                                      <span class="slider round"><h6 class="w3-left" style="padding-left: 10px;color: white;">UNSOLD</h6><h6 class="w3-right" style="padding-right: 5px;color: white;">SOLD</h6></span>
+                                    </label>
+                                    
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            <div class= "form-group row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-10">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"><h2> Product Image </h2>
+                                    </div>
+                                    <div class="w3-content w3-display-container" id="carouselimg">
+                                        
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-1"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        
+        <div class="footer-flex-container bg-dark">
+
+            <div class="footerItem1 footer-menu">
+                <div class="footerItem"><a href="aboutus.html">About Us</a></div>
+                <div class="footerItem"><a href="team.html">Team</a></div>
+                <div class="footerItem"><a href="contactus.html">Contact Us</a></div>
+            </div>
+
+            <div class="footerItem2">
+                <div class="footerItem"><a href="">Trade Tunnel &copy; 2018. All Rights Reserved.</a></div>
+            </div>
+
+        </div>
+        
+        <!-- BootStrap JS Code -->
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!-- Custom JS code -->
+        
+        <script src="js/countries.js"></script>
+
+        <script src="assets/js/jquery-1.7.1.min.js"></script>
+
+        <script src="assets/js/jquery.validate.js"></script>
+
+        <script src="assets/js/jquery.validate.min.js"></script> 
+        <script src="js/userprofile.js"></script>
+        <script src="js/logout.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                addEventListener('load', function (event) { prettyPrint() }, false);
+
+                $('pre').addClass('prettyprint linenums');
+            });
+        </script>
+        <script language="javascript">
+            populateCountries("country", "state"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+            populateCountries("country2");
+            populateCountries("country2");
+        </script>
+
+        <!-- Code to manipulate the carousel effects of product image -->
+        <script>
+            var slideIndex = 1;
+            showDivs(slideIndex);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+            }
+
+            function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = x.length
+                }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex - 1].style.display = "block";
+            }
+        </script>
+
+    </body>
+
+</html>

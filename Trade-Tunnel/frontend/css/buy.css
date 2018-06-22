@@ -1,0 +1,188 @@
+.heading {
+    padding-top: 10px;
+}
+
+.subheading {
+    padding-top: 20px;
+}
+#custom-search-form {
+    margin:0;
+    margin-top: 5px;
+    padding: 0;
+}
+
+#custom-search-form .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+/*    padding-left: 3px;*/
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 20px;
+    -webkit-transition: width  0.2s ease-in-out;
+    -moz-transition:width  0.5s ease-in-out;
+    -o-transition: width  0.5s ease-in-out;
+    transition: width  0.5s ease-in-out;
+}
+
+#custom-search-form button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 3px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 20px;
+}
+
+.search-query {
+    width: 500px;
+}
+.search-query:focus + button {
+    z-index: 3;   
+}   
+.search-query:hover,.search-query:focus{
+    width: 80%;
+} 
+
+#page > li {
+    padding: 10px;
+}
+
+#fade-logo {
+    display: none;
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #ababab;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .70;
+    filter: alpha(opacity=80);
+}
+#modal-logo {
+    display: none;
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    background-color: clear;
+    z-index: 1002;
+    text-align:center;
+    overflow: auto;
+}
+
+
+.main-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-flex-header {
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main-flex-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-flex-pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+}
+
+.main-flex-header-button {
+    flex-grow: 1;
+}
+
+.main-flex-header-search {
+    flex-grow: 7;
+}
+
+.main-cards-flex-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.main-cards-flex-row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: flex-start;
+}
+
+.card {
+    width: 400px;
+    margin: 20px;
+}
+
+.pager > li > a {
+    color: black;
+}
+
+.body-flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* MODAL CSS */
+.modal {
+    position: fixed;
+    top:0;
+    left: 0;
+    margin-left: 0;
+    height: 100%;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.close {
+    padding-top: -5px;
+}
+
+.modal-body {
+    min-height: 100%;
+}
+
+.top-buffer { 
+    margin-top:20px; 
+}
+
+.clrFltr, .emptySub {
+    display: none;
+}
+
+#subLabel {
+    display:block;
+}
+
+.main-flex-container img {
+    width: 400px;
+    height: 300px;
+}

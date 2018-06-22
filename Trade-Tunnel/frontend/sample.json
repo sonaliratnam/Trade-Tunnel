@@ -1,0 +1,195 @@
+{
+    "_embedded": {
+        "products": [
+            {
+                "productName": "Study Table",
+                "productDescription": "Wooden Table",
+                "price": 21.12,
+                "createDate": null,
+                "stat": "unsold",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/3"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/3"
+                    },
+                    "userProfile": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/3/userProfile"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/3/category"
+                    },
+                    "image": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/3/image"
+                    },
+                    "subcategory": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/3/subcategory"
+                    }
+                }
+            },
+            {
+                "productName": "Study platform",
+                "productDescription": "My Wooden Table",
+                "price": 10.12,
+                "createDate": null,
+                "stat": "unsold",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/4"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/4"
+                    },
+                    "userProfile": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/4/userProfile"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/4/category"
+                    },
+                    "image": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/4/image"
+                    },
+                    "subcategory": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/4/subcategory"
+                    }
+                }
+            },
+            {
+                "productName": "Dining",
+                "productDescription": "Glass Table",
+                "price": 23.12,
+                "createDate": null,
+                "stat": "unsold",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/5"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/5"
+                    },
+                    "userProfile": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/5/userProfile"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/5/category"
+                    },
+                    "image": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/5/image"
+                    },
+                    "subcategory": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/5/subcategory"
+                    }
+                }
+            },
+            {
+                "productName": "Fruit Table",
+                "productDescription": "Marble Table",
+                "price": 33.12,
+                "createDate": null,
+                "stat": "unsold",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/6"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/6"
+                    },
+                    "userProfile": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/6/userProfile"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/6/category"
+                    },
+                    "image": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/6/image"
+                    },
+                    "subcategory": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/6/subcategory"
+                    }
+                }
+            },
+            {
+                "productName": "My Table",
+                "productDescription": "Marble Table",
+                "price": 33.12,
+                "createDate": null,
+                "stat": "unsold",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/7"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/7"
+                    },
+                    "userProfile": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/7/userProfile"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/7/category"
+                    },
+                    "image": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/7/image"
+                    },
+                    "subcategory": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/7/subcategory"
+                    }
+                }
+            },
+            {
+                "productName": "Your Table",
+                "productDescription": "Marble Table",
+                "price": 33.12,
+                "createDate": null,
+                "stat": "unsold",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/8"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/8"
+                    },
+                    "userProfile": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/8/userProfile"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/8/category"
+                    },
+                    "image": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/8/image"
+                    },
+                    "subcategory": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/8/subcategory"
+                    }
+                }
+            },
+            {
+                "productName": "Lol Table",
+                "productDescription": "Marble Table",
+                "price": 33.12,
+                "createDate": null,
+                "stat": "unsold",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/9"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/9"
+                    },
+                    "userProfile": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/9/userProfile"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/9/category"
+                    },
+                    "image": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/9/image"
+                    },
+                    "subcategory": {
+                        "href": "http://localhost:8080/tradetunnel-api/products/9/subcategory"
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <title> Buy | Trade Tunnel </title>
+        
+        <link rel="icon" href="assets/mainIcon.png">
+         
+        <!-- Bootstrap CSS Code -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+        
+        <!-- Native CSS Code -->
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/buy.css">
+        
+    </head>
+    
+    <body>
+        <div class="body-flex-container">   
+            <!-- Header Bar -->
+            <div class="flex-container bg-dark">
+                <div class="item1">
+                    <a href="home.html"><img src="assets/mainIcon.png" class="mainImageIcon"></a>
+                </div>
+
+                <div class="item2 inner-flex-container">
+                    <div class="heading">Trade Tunnel</div>
+                    <div class="subheading">Trade it your way...</div>
+                </div>
+
+                <div class="item3 menu-flex-container">
+                    <div class="menuItem"><a href="home.html">Home</a></div>
+                    <div class="menuItem"><a href="buy.html">Buy</a></div>
+                    <div class="menuItem"><a href="sell.html">Sell</a></div>
+                    <div class="menuItem">
+                        <div class="dropdown">
+                          <button class="dropbtn" id="usernameGreeting"></button>
+                          <div class="dropdown-content">
+                            <a href="account.html">Account</a>
+                            <a href="" id="logout">Log Out</a>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Filter Button and search Bar row -->
+            <div class="main-flex-container">
+                <div class="main-flex-header">
+                    <div class="main-flex-header-button">
+                        <button type="button" class="btn btn-success" id="buyBtn" data-toggle="modal" data-target="#myModal"> Filters </button>
+                    </div>
+
+
+                    <div class="main-flex-header-search">
+                        <form id="custom-search-form" class="form-search form-horizontal pull-right" >
+                            <div class="input-append span12">
+                                <input type="text" class="search-query mac-style" id="search" style="height: auto;" placeholder=" What are you looking for ?">
+                                <button type="button" class="btn" id="iconButton"> <i class="icon-search"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Population of all the cards of products-->
+                <div class="main-flex-cards">
+                    <div class="main-cards-flex-container">
+                        <div class="main-cards-flex-row row1">
+                        </div>
+                        <div class="main-cards-flex-row row2">
+                        </div>
+                        <div class="main-cards-flex-row row3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination of the cards -->
+                <div class="main-flex-pagination">
+                    <ul class="pager">
+                      <li><a id="previous">Previous</a></li>
+                      <li><a id="next">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Footer Bar -->
+            
+            <div class="footer-flex-container bg-dark">
+                <div class="footerItem1 footer-menu">
+                    <div class="footerItem"><a href="aboutus.html">About Us</a></div>
+                    <div class="footerItem"><a href="team.html">Team</a></div>
+                    <div class="footerItem"><a href="contactus.html">Contact Us</a></div>
+                </div>
+
+                <div class="footerItem2">
+                    <div class="footerItem"><a href="">Trade Tunnel &copy; 2018. All Rights Reserved.</a></div>
+                </div>
+
+            </div>
+
+            <!-- Spinner logo appears while page loads -->
+            
+            <div id="fade-logo"></div>
+            <div id="modal-logo">
+                <img class="img-responsive" id="loader" src="assets/loader.gif" />
+            </div>
+        </div>
+        
+        <!-- Filters Modal -->
+        <div class="modal hide" id="myModal">
+          <div class="modal-header">
+            <h3>Filters</h3>
+            <button type="button" class="close" id="closeFilter" data-dismiss="modal">x</button>
+          </div>
+          <div class="modal-body">
+            <form id= "Filters" class="form-control">
+                                    <div id= "accordion">
+                                        <div class="card">
+                                            <div class="card-header" id="Category">
+                                                <div class="row form-group">
+                                                    <div class="col-sm-1"></div>
+                                                    <div class="col-sm-10">
+                                                        <h5 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" href="#catBody" aria-expanded="true" aria-controls="catBody">
+                                                                Category
+                                                            </a>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="col-sm-1"></div>
+                                                </div>
+                                            </div>
+
+                                            <div id="catBody" class="in" aria-labelledby="Category" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-1"></div>
+                                                        <div id="catSelect" class="col-sm-10">
+                                                            <select class="form-control" id="category" onchange="populateSubCategory(this.value);">
+                                                                <option value="notSelected">Not Selected</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" id="SubCategory">
+                                                <div class="row form-group">
+                                                    <div class="col-sm-1"></div>
+                                                    <div class="col-sm-10">
+                                                        <h5 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" href="#subcatBody" aria-expanded="true" aria-controls="subcatBody">
+                                                                Sub Category
+                                                            </a>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="col-sm-1"></div>
+                                                </div>
+                                            </div>
+
+                                            <div id="subcatBody" class="expand in show" aria-labelledby="SubCategory" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-1"></div>
+                                                        <div id="subcatBody" class="col-sm-10">
+                                                            <div id= "subLabel">
+                                                                <label>Please select a category! </label>
+                                                            </div>
+                                                            <div id = "sublist">
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" id="Price">
+                                                <div class="row form-group">
+                                                    <div class="col-sm-1"></div>
+                                                    <div class="col-sm-10">
+                                                        <h5 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" href="#priceBody" aria-expanded="false" aria-controls="priceBody">
+                                                                Price
+                                                            </a>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="col-sm-1"></div>
+                                                </div>
+                                            </div>
+
+                                            <div id="priceBody" class="collapse in show" aria-labelledby="SubCategory" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-1"></div>
+                                                        <div class="col-sm-2">
+                                                            <label for="minVal">From: </label>
+                                                        </div>
+                                                        <div class="col-sm-3"> 
+                                                            <input id="minVal" type="text" class="form-control" name="minVal" placeholder="0"></div>
+
+                                                        <div class="col-sm-2">
+                                                            <label for="maxVal">To: </label>
+                                                        </div>
+                                                        <div class="col-sm-3"> 
+                                                            <input id="maxVal" type="text" class="form-control" name="maxVal" placeholder="500"></div>
+                                                        <div class="col-sm-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-header" id="Location">
+                                                <div class="row form-group">
+                                                    <div class="col-sm-1"></div>
+                                                    <div class="col-sm-10">
+                                                        <h5 class="mb-0">
+                                                            <a class="btn btn-link" data-toggle="collapse" href="#locBody" aria-expanded="true" aria-controls="locBody">
+                                                                Location
+                                                            </a>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="col-sm-1"></div>
+                                                </div>
+                                            </div>
+
+                                            <div id="locBody" class="collapse in show" aria-labelledby="SubCategory" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    <div class="form-group row">
+                                                        <div class="col-sm-1"></div>
+                                                        <div class="col-sm-10">
+                                                            <input id="location" type="text" class="form-control" name="location" placeholder="Enter City">
+                                                        </div>
+                                                        <div class="col-sm-1"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-1"></div>
+                                        <div class="col-sm-3">
+                                            <input id="submit" type="button" class="btn btn-primary top-buffer" value = "Submit"/>
+                                        </div>
+                                        <div class="col-sm-4"></div>
+                                        <div class="col-sm-3">
+                                            <input id="clearFilters" type="reset" class="btn btn-primary top-buffer clrFltr" value="Clear">
+                                        </div>
+                                        <div class="col-sm-1"></div>
+                                    </div>  
+                                </form>
+          </div>
+        </div>
+        
+        
+        <!-- Jquery, Popper, Bootstrap JS Code -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script src="js/buy.js"></script>
+        <script src="js/logout.js"></script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+{
+        "subCategorieses": [
+            {
+                "subcategoryName": "Mobile",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/1"
+                    },
+                    "subCategories": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/1"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/1/product"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/1/category"
+                    }
+                }
+            },
+            {
+                "subcategoryName": "Laptop",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/2"
+                    },
+                    "subCategories": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/2"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/2/product"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/2/category"
+                    }
+                }
+            },
+            {
+                "subcategoryName": "Video Game",
+                "_links": {
+                    "self": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/3"
+                    },
+                    "subCategories": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/3"
+                    },
+                    "product": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/3/product"
+                    },
+                    "category": {
+                        "href": "http://localhost:8080/tradetunnel-api/subCategorieses/3/category"
+                    }
+                }
+            }
+        ]
+    }

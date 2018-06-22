@@ -1,0 +1,97 @@
+.carousel-item img {
+  height: 62vh;
+  min-height: 400px;
+
+  background: no-repeat center center scroll;
+    
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.modal.right .modal-dialog {
+		position: fixed;
+		margin: auto;
+		width: 500px;
+		height: 100%;
+		-webkit-transform: translate3d(0%, 0, 0);
+		    -ms-transform: translate3d(0%, 0, 0);
+		     -o-transform: translate3d(0%, 0, 0);
+		        transform: translate3d(0%, 0, 0);
+}
+
+
+.modal.right .modal-content {
+		height: 100%;
+		overflow-y: auto;
+}
+
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: 0px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+       -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+         -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+            transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0px;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+    border-radius: 0;
+    border: none;
+    left: 0;
+}
+
+.modal-header {
+    border-bottom-color: #EEEEEE;
+    background-color: #FAFAFA;
+}
+
+
+#submitSignup, #register {
+    position: absolute;
+    right: 30px;
+}
+
+.social {
+    text-align: center;
+}
+
+#facebook, #google {
+    margin: 20px;
+}
+
+#header {
+    padding-top: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.information {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+label.valid {
+	width: 12px;
+	height: 12px;
+	background: url(assets/img/valid.png) center center no-repeat;
+	display: inline-block;
+	text-indent: -9999px;
+}
+label.error {
+	color: red;
+    height: 10px;
+	padding: 2px 4px;
+	margin-top: 2px;
+    font-size: 12px;
+}
